@@ -2,7 +2,7 @@
 Notes on Jetpack Compose.  These are my personal notes.  Use them if you want.
 
 ## Column
-### Modifiers
+### Modifiers for Column
 ```modifier = Modifier
   .padding(horizontal = 8.dp, vertical = 8.dp),
 or use:   (top = 8.dp, bottom = 8.dp, start = 8.dp, end = 8.dp),
@@ -10,7 +10,7 @@ or use:   (top = 8.dp, bottom = 8.dp, start = 8.dp, end = 8.dp),
 *GOTCHA* These padding modifiers cannot be mixed and matched
 - use horizontal and vertical OR use top, bottom, start, end
 
-### Spacing 
+### Spacing for Column
 ```
 horizontalAlignment = Alignment.CenterHorizontally,
 ```
@@ -20,7 +20,7 @@ horizontalAlignment = Alignment.CenterHorizontally,
 -`Row`s use `HorizontalArrangement` and `VerticalAlignment`
 
 ## Row
-### Modifiers
+### Modifiers for Row
 ```modifier = Modifier
     .padding(horizontal = 8.dp, vertical = 8.dp),
 or use: (top = 8.dp, bottom = 8.dp, start = 8.dp, end = 8.dp),
