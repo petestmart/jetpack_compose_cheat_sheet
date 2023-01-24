@@ -75,3 +75,34 @@ Canvas (
 	}
 )
 ```
+## Interop From Different File Types
+Widget
+```
+override fun buildView(inflater: LayoutInflater): View {
+
+        val binding = ViewDetailWidgetDetailsBinding.inflate(inflater, null, false)
+        binding.tableContainerComposeview.setContent {
+            ComposableWidget()
+        }
+
+        return binding.root
+    }
+```
+
+Function inside of a Fragment
+```
+view?.findViewById<ComposeView>(R.id.map_fragment_container_composeview)
+            ?.setContent {
+                // Delegate to observe the showDialog state in viewModel
+                val showDialogState: Boolean by dialog.showDialog.collectAsState()
+
+                MdcTheme {
+                    OptionSelectComposeDialog(
+                        show = showDialogState,
+                        onDismiss = dialog::onDialogDismiss,
+                        onConfirm = dialog::onDialogConfirm,
+                        vm = dialog,
+                    )
+                }
+            }
+```
